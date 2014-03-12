@@ -1,0 +1,37 @@
+{
+  "name": "gulp-common",
+  "version": "0.0.1",
+  "description": "Common functions for creating gulpfiles.",
+  "main": "gulp-common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scalableminds/gulp-common.git"
+  },
+  "author": "Norman Rzepka <norman@scm.io> (http://scm.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scalableminds/gulp-common/issues"
+  },
+  "homepage": "https://github.com/scalableminds/gulp-common",
+  "dependencies": {
+    "gulp": "^3.5.2",
+    "event-stream": "^3.1.0",
+    "gulp-util": "^2.2.14",
+    "gulp-plumber": "^0.5.6",
+    "gulp-watch": "^0.5.0",
+    "through2": "^0.4.1",
+    "duplexer2": "0.0.1",
+    "multipipe": "0.0.2",
+    "concurrent-transform": "^1.0.0",
+    "multistream-merge": "^0.1.0",
+    "gulp-less": "^1.2.1",
+    "gulp-coffee": "^1.4.1",
+    "gulp-clean": "^0.2.4",
+    "gulp-rename": "^1.1.0",
+    "gulp-imagemin": "^0.1.5",
+    "connect": "^2.11.2"
+  }
+}
