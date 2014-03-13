@@ -2,9 +2,10 @@
   "name": "gulp-common",
   "version": "0.0.1",
   "description": "Common functions for creating gulpfiles.",
-  "main": "gulp-common.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "coffee -co lib src"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,8 @@
     "gulp-rename": "^1.1.0",
     "gulp-imagemin": "^0.1.5",
     "connect": "^2.11.2"
+  },
+  "devDependenices": {
+    "coffee-script": "scalableminds/coffee-script"
   }
 }
