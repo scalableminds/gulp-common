@@ -8,6 +8,7 @@ multipipe   = require("multipipe")
 parallel    = require("concurrent-transform")
 merge       = require("multistream-merge")
 connect     = require("connect")
+filesize    = require("filesize")
 
 os          = require("os")
 path        = require("path")
@@ -24,7 +25,11 @@ module.exports = (gulp) ->
   logger = ->
 
     return through.obj((file, enc, done) ->
-      util.log(">>", util.colors.yellow(path.relative(process.cwd(), file.path)))
+      util.log(
+        ">>"
+        util.colors.yellow(path.relative(process.cwd(), file.path))
+        util.colors.grey("(#{filesize(file.contents.length, round : 1)})"
+      )
       done(null, file)
       return
     )
@@ -133,4 +138,16 @@ module.exports = (gulp) ->
     fork
     parallelize
     pipe : multipipe
+    merge
+
+    # coffee      : require("gulp-coffee")
+    # less        : require("gulp-less")
+    # clean       : require("gulp-clean")
+    # util        : require("gulp-util")
+    # gif         : require("gulp-if")
+    # exec        : require("gulp-exec")
+    # rename      : require("gulp-rename")
+    # imagemin    : require("gulp-imagemin")
+    # imageResize : require("gulp-image-resize")
+    # awspublish  : require("gulp-awspublish")
   }

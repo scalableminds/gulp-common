@@ -34,6 +34,7 @@
     "gulp-rename": "^1.1.0",
     "gulp-imagemin": "^0.1.5",
     "connect": "^2.11.2",
-    "coffee-script": "scalableminds/coffee-script"
+    "coffee-script": "scalableminds/coffee-script",
+    "filesize": "^2.0.3"
   }
 }
