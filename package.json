@@ -33,9 +33,7 @@
     "gulp-clean": "^0.2.4",
     "gulp-rename": "^1.1.0",
     "gulp-imagemin": "^0.1.5",
-    "connect": "^2.11.2"
-  },
-  "devDependenices": {
+    "connect": "^2.11.2",
     "coffee-script": "scalableminds/coffee-script"
   }
 }
