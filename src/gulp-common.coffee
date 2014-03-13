@@ -28,7 +28,7 @@ module.exports = (gulp) ->
       util.log(
         ">>"
         util.colors.yellow(path.relative(process.cwd(), file.path))
-        util.colors.grey("(#{filesize(file.contents.length, round : 1)})"
+        util.colors.grey("(#{filesize(file.contents.length, round : 1)})")
       )
       done(null, file)
       return
