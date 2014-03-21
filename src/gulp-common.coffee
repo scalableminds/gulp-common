@@ -72,7 +72,7 @@ module.exports = (gulp) ->
   buildAndWatch = (key, src, dest, options, streamMaker) ->
 
     if arguments.length == 3
-      streamMaker = ->
+      streamMaker = -> through.obj()
       options = {}
 
     if arguments.length == 4
@@ -107,11 +107,14 @@ module.exports = (gulp) ->
       stream = streamMaker()
       stream.on("error", handleError)
       if options.singleFile
+
         if options.emitOnGlob
+          _stream = streamMaker()
+          _stream.on("error", handleError)
           gulp
             .src(src)
             .pipe(plumber())
-            .pipe(stream)
+            .pipe(_stream)
             .pipe(gulp.dest(dest))
             .pipe(logger())
 
