@@ -71,6 +71,10 @@ module.exports = (gulp) ->
 
   buildAndWatch = (key, src, dest, options, streamMaker) ->
 
+    if arguments.length == 3
+      streamMaker = ->
+      options = {}
+
     if arguments.length == 4
       streamMaker = options
       options = {}
@@ -92,7 +96,6 @@ module.exports = (gulp) ->
       stream.on("error", handleError)
       return gulp
         .src(src)
-        .pipe(logger())
         .pipe(plumber())
         .pipe(stream)
         .pipe(gulp.dest(dest))
@@ -138,7 +141,7 @@ module.exports = (gulp) ->
     fork
     parallelize
     pipe : multipipe
-    merge
+    merge : merge.obj
 
     # coffee      : require("gulp-coffee")
     # less        : require("gulp-less")
