@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "description": "Common functions for creating gulpfiles.",
   "main": "index.coffee",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "coffee -co lib src"
-  },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/scalableminds/gulp-common.git"
