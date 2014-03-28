@@ -1,6 +1,6 @@
 {
   "name": "gulp-common",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Common functions for creating gulpfiles.",
   "main": "index.coffee",
   "scripts": {
