@@ -1,0 +1,37 @@
+exports.buildAndWatch = require("./lib/build_and_watch")
+exports.handleError   = require("./lib/handle_error")
+exports.logger        = require("./lib/logger")
+exports.clone         = require("./lib/clone")
+exports.fork          = require("./lib/fork")
+exports.server        = require("./lib/server")
+
+
+exports.coffee      = require("gulp-coffee")
+exports.less        = require("gulp-less")
+exports.util        = require("gulp-util")
+exports.clean       = require("gulp-clean")
+exports.gif         = require("gulp-if")
+exports.exec        = require("gulp-exec")
+exports.rename      = require("gulp-rename")
+exports.gm          = require("gulp-gm")
+exports.imagemin    = require("gulp-imagemin")
+exports.imageResize = require("gulp-image-resize")
+exports.awspublish  = require("gulp-awspublish")
+exports.watch       = require("gulp-watch")
+exports.concat      = require("gulp-concat")
+exports.order       = require("gulp-order")
+exports.uglify      = require("gulp-uglify")
+exports.amdOptimize = require("amd-optimize")
+exports.merge       = require("multistream-merge").obj
+exports.pipe        = require("multipipe")
+exports.changed     = require("gulp-changed")
+exports.plumber     = require("gulp-plumber")
+exports.coffeelint  = require("gulp-coffeelint")
+exports.template    = require("gulp-template")
+exports.eventStream = require("event-stream")
+exports.runSequence = require("run-sequence")
+exports.through     = require("through2").obj
+exports.from        = require("from2").obj
+exports.duplexer    = require("duplexer2")
+exports.spawn       = require("child_process").spawn
+exports.connect     = require("connect")
