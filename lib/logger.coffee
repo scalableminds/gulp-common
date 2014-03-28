@@ -5,7 +5,7 @@ filesize = require("filesize")
 
 module.exports = logger = ->
 
-  return through.obj((file, enc, done) ->
+  return through((file, enc, done) ->
     util.log(
       ">>"
       util.colors.yellow(path.relative(process.cwd(), file.path))
