@@ -1,5 +1,6 @@
 exports.buildAndWatch = require("./lib/build_and_watch")
 exports.handleError   = require("./lib/handle_error")
+exports.parallelize   = require("./lib/parallelize")
 exports.logger        = require("./lib/logger")
 exports.clone         = require("./lib/clone")
 exports.fork          = require("./lib/fork")

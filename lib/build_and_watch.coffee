@@ -1,7 +1,9 @@
-through = require("through2").obj
-plumber = require("gulp-plumber")
-watch   = require("gulp-watch")
-logger  = require("./logger")
+through     = require("through2").obj
+plumber     = require("gulp-plumber")
+watch       = require("gulp-watch")
+
+logger      = require("./logger")
+handleError = require("./handle_error")
 
 module.exports = buildAndWatch = (gulp) ->
   (key, src, dest, options, streamMaker) ->
